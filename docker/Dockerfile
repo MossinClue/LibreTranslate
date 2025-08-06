@@ -43,4 +43,4 @@ RUN if [ "$with_models" = "true" ]; then  \
   fi
 
 EXPOSE 10000
-ENTRYPOINT [ "./venv/bin/libretranslate", "--host", "*", "--port", "10000" ]
+ENTRYPOINT ["sh", "-c", "./venv/bin/libretranslate --host '*' --port ${PORT}"]
